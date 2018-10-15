@@ -1,0 +1,849 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	max-width: 1920px
+	margin: auto
+	font-weight: bold
+	background-color: #f3f3f6
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.button
+	text-decoration: none
+	color: $dark
+	background-color: $active
+	border-radius: 20px
+	padding: 10px 40px
+	font-size: 12px
+	box-shadow: 3px 3px 5px 0px rgba(0,0,0,.2)
+	cursor: pointer
+	&:active
+		transform: scale(0.9)
+	&:hover
+		text-decoration: none
+		color: $dark
+button:focus
+	outline: none
+
+h1 
+	font-size: 70px
+
+h2
+	color: $accent
+	font-weight: bold
+	font-size: 48px
+
+h3
+	color: $accent
+	font-weight: bold
+	font-size: 28px
+
+
+header
+	background-color: #f3f3f6
+	background-image: url(../img/bg.png)
+	background-position: top center
+	background-repeat: no-repeat
+	height: 890px
+	background-size: auto 890px
+	position: relative
+	z-index: 20
+	.planet
+		background-image: url(../img/bg2.png)
+		background-position: center
+		position: absolute
+		background-size: 
+		background-repeat: no-repeat
+		height: 630px
+		width: 1406px
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		margin: auto
+		pointer-events: none
+		p
+	.header-top
+		padding-top: 25px
+	.logo
+		display: inline-block
+	.top-menu
+	.menu-main
+		display: block
+		margin-top: 10px
+		padding: 0
+		list-style-type: none
+		text-align: right
+	.menu-main>li
+		display: inline-block
+		position: relative
+		vertical-align: middle
+				
+	.menu-main>li>a
+		display: inline-block
+		color: #28312f
+		text-decoration: none
+		font-size: 14px
+		font-weight: bold
+		padding: 8px 16px
+		border-radius: 20px
+		transition: background-color .6s ease
+		transition: color .6s ease
+		.fa-caret-down:before
+			padding-left: 3px
+		&:hover
+			background-color: $accent
+			color: #fff
+			box-shadow: 4px 4px 10px 0px rgba(0,0,0,.2);
+			transition: background-color .4s ease
+			transition: color .4s ease
+		&.active
+			color: #28312f
+			background-color: $active
+			box-shadow: 4px 4px 10px 0px rgba(0,0,0,.2)
+	.menu-sub
+		position: absolute
+		display: block
+		display: none
+		width: 100%
+		height: auto
+		padding: 0
+		background-color: $accent
+		border-radius: 20px
+		text-align: center
+		margin-top: 10px
+		text-align: left
+		z-index: 30
+		box-shadow: 4px 4px 10px 0px rgba(0,0,0,.2);
+		li
+			list-style-type: none
+			border-bottom: solid 1px $a_accent
+			transition: background-color .3s ease
+			&:hover
+				background-color: $a_accent
+			&:last-child
+				border-bottom: none
+				border-radius: 0 0 20px 20px
+			&:first-child
+				border-radius: 20px 20px 0 0
+			a
+				display: block
+				padding: 8px 14px
+				text-decoration: none
+				font-size: 12px
+				color: #fff
+	
+
+.navbar
+	width: 1px
+	background-color: $accent
+	position: absolute
+	bottom: 0
+	ul
+		padding: 0
+		margin: 0
+	a
+		text-decoration: none
+		color: #fff
+	li
+		position: relative
+		left: -10px
+		margin-top: 11px	
+		font-size: 12px
+		text-align: center
+		width: 20px
+		height: 20px
+		line-height: 20px
+		background-color: $accent
+		border-radius: 20px
+		list-style-type: none
+		box-shadow: inset 0 -1px 1px rgba(0,0,0,0.5)
+		transition: background-color .3s ease
+		transition: color .2s ease
+		animation: eye 3s ease-in-out infinite;
+		&:hover
+			background-color: $active
+			color: #202725
+		&:after
+			position: absolute
+			content: 'Фауна'
+			margin-left: 15px
+			border-radius: 20px
+			background-color: #5c716a
+			padding: 1px 30px
+			top: -1px
+		&:before
+			content: ''
+			position: absolute
+			left: 15px
+			bottom: 1px
+			border: 9px solid transparent
+			border-right: 9px solid #5c716a
+ul .first
+	margin-top: 0px
+.header-content
+	margin-top: 35px
+	font-weight: bold
+	text-align: center
+	color: $accent
+	line-height: 1.2
+	span
+		font-size: 68px
+	p
+		margin: 0
+		font-size: 39px
+	i
+		position: relative
+		top: 385px
+		font-size: 30px
+		color: #fff
+		width: 55px
+		height: 55px
+		border-radius: 27px
+		background-color: $accent
+		line-height: 55px 
+		font-size: 30px
+		box-shadow: 4px 4px 10px 0px rgba(0,0,0,.2);
+.contest
+	text-align: center
+	position: relative
+	z-index: 20
+	margin-top: 80px
+	&-bg
+		background-image: url(../img/contest-bg.png)
+		width: 1900px
+		height: 150px
+		background-size: 100% 100%
+		background-position: right 
+		background-repeat: no-repeat
+		position: absolute
+		top: 110px
+		left: 0
+		right: 0
+		bottom: 0
+		top: -350px
+		margin: auto
+		margin-left: 30px
+		pointer-events: none
+		z-index: 25
+	a
+		text-decoration: none
+		color: #202725
+		font-size: 12px
+		i
+			vertical-align: middle
+			margin-left: 10px
+			color: $accent
+	&-carousel
+		.contest-item
+			font-weight: 
+			span
+				margin-top: 10px
+				background-color: $accent
+				border-radius: 20px
+				color: #fffefe
+				padding: 4px 25px
+			p
+				margin: auto
+				text-align: center
+				margin-top: 15px
+				max-width: 280px
+		&-item
+			margin: auto
+			height: 215px
+			width: 375px
+			background-size: cover
+			background-repeat: no-repeat
+			background-position: center
+			margin-bottom: 10px
+.owl-item:hover
+	color: $dark
+	.button-contest
+		visibility: visible
+		top: 105px
+		opacity: 1
+		transition: .4s ease
+
+.owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled
+	display: block	
+
+	.owl-prev, .owl-next
+		font-size: 30px
+		color: #fff
+		width: 55px
+		height: 55px
+		border-radius: 27px
+		background-color: $accent
+		position: absolute
+		top: 108px
+		box-shadow: 4px 4px 10px 0px rgba(0,0,0,.2);
+	.owl-next
+		right: -30px
+	.owl-prev
+		left: -30px
+.button-contest
+	box-shadow: 12px 10px 8px 2px rgba(0,0,0,0.5)
+	position: absolute
+	left: 130px
+	top: 0
+	visibility: hidden
+	transition: .4s ease
+	opacity: .1
+
+.fauna 
+	background-position: center 0
+	min-height: 690px
+	background-repeat: no-repeat
+	position: relative
+	z-index: 20
+	.fauna-bg
+		position: relative
+		margin: auto
+		overflow: hidden
+		width: 100%
+		&:first-child
+			margin-bottom: -150px
+			height: 150px
+			top: 0
+			background-image: url(../img/of1.png)
+			background-repeat: no-repeat
+			pointer-events: none
+			z-index: 5
+		&:nth-child(2)
+			margin-bottom: -200px
+			height: 200px
+			top: 230px
+			left: 165px
+			background-image: url(../img/of3.png)
+			background-repeat: no-repeat
+			z-index: 5
+			pointer-events: none
+		&:nth-child(3)
+			margin-bottom: -100px
+			height: 100px
+			top: 590px
+			background-image: url(../img/of2.png)
+			background-repeat: no-repeat
+			z-index: 5
+			pointer-events: none
+	&-content
+		padding: 0 60px
+		padding-top: 150px
+		background-color: #fff
+		height: 690px
+		font-size: 15px
+
+		&-header
+			margin-bottom: 40px
+			img
+				margin: auto
+				display: inline-block
+			h3
+				margin: 0
+				vertical-align: middle
+				display: inline-block
+				width: 500px
+				line-height: 1.2
+				padding-left: 30px
+		p
+			font-weight: 500
+	.fauna-button
+		display: inline-block
+
+.animals
+	margin-top: -1074px
+	text-align: center
+	position: relative
+	.track
+		background-image: url(../img/track.png)
+		width: 100%
+		height: 1074px
+		position: relative
+		pointer-events: none
+		overflow: auto
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center
+		top: 1050px
+		bottom: 0
+		right: 0
+		left: 0
+		margin: auto
+		z-index: 20
+	&-header
+		margin-bottom: 90px
+	a
+		text-decoration: none
+		color: #202725
+		font-size: 12px
+		i
+			vertical-align: middle
+			margin-left: 10px
+			color: $accent
+	&-content
+		margin-top: -230px
+		padding: 0 60px
+		padding-top: 100px
+		height: 600px
+		font-size: 15px
+		position: relative
+		background-color: #fff
+		text-align: left
+		.button
+			display: inline-block
+		h3
+			color: $dark
+		p
+			font-size: 14px
+			font-weight: 500
+			margin-bottom: 50px
+		&-bg
+			width: 100%
+			.bg-2
+				height: 114px
+				background-image: url(../img/of5.png)
+				background-repeat: no-repeat
+				background-position: center
+				pointer-events: none
+				position: relative
+				z-index: 10
+				top: -130px
+			.bg-1
+				height: 73px
+				background-image: url(../img/of4.png)
+				background-repeat: no-repeat
+				background-position: center
+				pointer-events: none
+				position: relative
+				z-index: 10
+				top: 490px
+
+		.date
+			margin-top: 7px
+			font-size: 12px
+			padding: 2px 20px
+			background-color: #a2a2a2
+			border-radius: 20px
+			color: #fff
+.theme
+	height: 30px
+	margin-bottom: 15px
+	div
+		display: inline-block
+	.tag
+		position: absolute
+		right: 0
+		color: #fff
+		padding: 3px
+		padding-left: 20px
+		background-color: $accent
+		border-radius: 20px 0 0 20px
+		div
+			width: 20px
+			height: 15px
+			background-size: cover
+			background-position: -18px 3px
+			background-repeat: no-repeat
+	
+.animals-items
+	text-align: left
+.animal-item
+	vertical-align: top
+	text-align: center
+	display: inline-block
+	margin-right: 40px
+	width: 90px
+	span
+		position: relative
+		width: 85px
+		height: 85px
+		border-radius: 50%
+		background-color: #fff
+		display: inline-block
+		background-image: url(../img/sprite.png)
+		background-repeat: no-repeat
+		background-position: -1048px 12px
+		transition: 0.5s
+	&.active
+		span
+			background-color: $accent
+	&:nth-child(2) span
+		background-position: 18px 15px
+	&:nth-child(3) span
+		background-position: -960px 15px
+	&:nth-child(4) span
+		background-position: -1198px 12px
+	&:nth-child(5) span
+		background-position: -1130px 12px
+	&:nth-child(6) span
+		background-position: -215px 15px
+	&:nth-child(7)  span
+		background-position: -698px 15px
+	&:nth-child(8) span
+		background-position: -620px 12px
+	&:nth-child(9) span
+		background-position: -792px 18px
+	&:nth-child(10) span
+		background-position: -884px 15px
+	&:nth-child(11) span
+		background-position: -538px 12px 
+	&:nth-child(12) span
+		background-position: -449px 12px
+	&:nth-child(13) span
+		background-position: -370px 15px
+	&:nth-child(14) span
+		background-position: -300px 12px
+	&:nth-child(15) span
+		background-position: -137px 15px
+	&:nth-child(16) span
+		background-position: -60px 15px
+	&:nth-child(5n+5)
+		margin-right: 0
+.animal-item:hover span
+	background-color: $accent
+	background-image: url(../img/sprite2.png)
+	transform: rotateY(180deg)
+	transition: 0.5s
+ 	transform-style: preserve-3d
+ 	position: relative;
+.animal-item.active span:after
+	left: 33px
+	bottom: -16px
+	border: 9px solid transparent
+	border-top: 9px solid $accent
+	visibility: visible
+.animal-item span:after
+	content: ''
+	position: absolute
+	left: 33px
+	bottom: -0
+	border: 9px solid transparent
+	border-top: 9px solid #fff
+	transition: 0.5s
+	visibility: hidden
+.animal-item:hover span:after
+	content: ''
+	position: absolute
+	left: 33px
+	bottom: -16px
+	border: 9px solid transparent
+	border-top: 9px solid $accent
+	visibility: visible
+
+.animal-item:hover
+	p
+		color: $accent
+.animal-item.active
+	p
+		color: $accent
+.date
+	background-color: $accent
+	display: inline-block
+	margin: 0
+	font-size: 12px
+	padding: 2px 20px
+	border-radius: 20px
+	color: #fff
+.news-poll
+	position: relative
+	.date
+		margin-bottom: 20px
+	.news
+		margin-bottom: 60px
+		.date
+			margin-bottom: 0
+	.news-photo
+		margin-bottom: -250px
+	.news-header
+		h2
+			font-size: 46px
+			display: inline-block
+		a 
+			float: right
+			margin-top: 40px
+			text-decoration: none
+			color: #202725
+			vertical-align: bottom
+			display: inline-block
+			font-size: 12px
+			i
+				vertical-align: middle
+				margin-left: 10px
+				color: $accent
+	
+	.news-content
+		margin-top: 20px
+		p
+			font-size: 12px
+		p:first-child
+			font-weight: bold
+			font-size: 18px
+			color: #202725
+
+	&-content
+		padding-top: 260px
+		background: #fff
+		background-image: url(../img/bg3.png)
+		background-repeat: no-repeat
+		background-position: center
+		height: 1000px
+	.bg-photo
+		width: 312px
+		height: 281px
+		background-image: url(../img/of6.png)
+		z-index: 20
+		position: relative
+	
+	.bg-photo1
+		width: 312px
+		height: 281px
+		background-image: url(../img/photo4.jpg)
+		position: relative
+		top: -281px
+		pointer-events: none
+	.bg-photo2
+		background-color: #f3f3f6
+		width: 312px
+		height: 281px
+		position: relative
+		top: 0px
+		background-image: url(../img/animals2.jpg)
+		background-repeat: no-repeat
+		background-size: cover
+		div
+			text-align: center
+			height: 100%
+			padding-top: 85px
+
+	.poll-header
+		h2
+			margin: 0
+			display: inline-block
+		a 
+			float: right
+			margin-top: 40px
+			margin-right: 40px
+			text-decoration: none
+			color: #202725
+			vertical-align: bottom
+			display: inline-block
+			font-size: 12px
+			i
+				vertical-align: middle
+				margin-left: 10px
+				color: $accent
+		p
+			line-height: 1.2
+			font-weight: 400
+		input[type="radio"]:checked, 
+		input[type="radio"]:not(:checked)
+			display: none
+		input[type="radio"]:checked + label, 
+		input[type="radio"]:not(:checked) + label
+			display: inline-block
+			position: relative
+			padding-left: 28px
+			line-height: 20px
+			cursor: pointer
+		input[type="radio"]:checked + label:before,
+		input[type="radio"]:not(:checked) + label:before 
+			content: ""
+			position: absolute
+			left: 0px
+			top: 0px
+			width: 23px
+			height: 23px
+			background-color: #ffffff
+			border-radius: 100%
+			border: solid 5px #c5c5c5
+		input[type="radio"]:checked + label:after, 
+		input[type="radio"]:not(:checked) + label:after 
+			content: ""
+			position: absolute
+			transition: all 0.2s ease
+		input[type="radio"]:checked + label:after, 
+		input[type="radio"]:not(:checked) + label:after 
+			left: 7px
+			top: 7px
+			width: 9px
+			height: 9px
+			border-radius: 100%
+			background-color: #6f6f6f
+		input[type="radio"]:not(:checked) + label:after
+    	opacity: 0
+		input[type="radio"]:checked + label:after
+			opacity: 1
+		input[type="radio"]:checked + label:before
+			border: $active solid 5px
+		input[type="submit"]
+			position: absolute
+			left: -223px
+			top: 160px
+			border: none
+			padding: 
+.parallax-news
+	background-image: url(../img/bg-news.png)
+	background-repeat: no-repeat
+	position: absolute
+	width: 100%
+	height: 590px
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	margin: auto
+.contacts
+	padding-top: 370px
+	background-image: url(../img/bg4.png)
+	background-position: center
+	background-repeat: no-repeat
+	height: 759px
+	position: relative
+	top: -300px
+	margin-bottom: -300px
+	h2
+		color: #fff
+	&-content	
+		div
+			color: #fff
+			font-weight: 500
+			margin-bottom: 15px
+			&:before
+				content: ''
+				margin-right: 20px
+				width: 33px
+				height: 33px
+				border-radius: 20px
+				position: relative
+				top: 12px
+				background-color: #fff
+				background-image: url(../img/sprite-cont.png)
+				background-repeat: no-repeat
+				background-position: 8px 7px
+				display: inline-block
+			&:nth-child(2):before
+				background-position: 8px -51px
+			&:nth-child(3):before
+				background-position: 8px -111px	
+			&:nth-child(4):before
+				background-position: 8px -169px
+
+
+.menu
+	background: $active
+	height: 50px
+	a 
+		color: $dark
+		font-size: 14px
+		border-right: solid 1px #d9b92c
+		padding: 0 30px
+		line-height: 
+		&:hover
+			text-decoration: none
+	ul
+		padding-top: 12px
+		li
+			display: inline-block
+
+footer
+	background-color: #fff
+	.container
+		.col-5
+			background-color: #f8f8f8
+		.col-3:nth-child(2)
+			background-color: #f8f8f8
+	.footer-logo
+		margin-top: 33px
+		p
+			margin-top: 10px
+			font-weight: 500
+			font-size: 11px
+	.footer-contacts
+		.contacts-content
+			margin-top: 45px
+			margin-left: 30px
+			div
+				color: $text
+				margin: 10px
+				font-size: 14px
+
+	.sub
+		background-image: url(../img/bg5.png)
+		background-repeat: no-repeat
+		background-position: 40px 20px
+		height: 100%
+		text-align: center
+		font-size: 11px
+		position: relative
+		&-content
+			position: absolute
+			top: 60px
+			left: 115px
+			width: 310px
+		input
+			margin: auto
+			border-radius: 20px 
+			border: solid 1px #e7e7e9
+			background-color: #f7f7f9
+			background-image: url(../img/sprite-cont.png)
+			background-position: 15px -167px
+			background-repeat: no-repeat
+			font-style: italic
+			font-size: 12px
+			padding: 10px 20px 10px 40px
+			display: block
+			width: 180px
+			&:active
+				background-color: #fff
+				font-style: normal
+			&:focus
+				background-color: #fff
+				font-style: normal
+		button
+			margin: 10px auto 0
+			display: block
+			border: none
+			padding: 10px 55px
+
+	.partners
+		margin-top: 20px
+		img
+			margin-top: 15px
+.footer-sub
+	height: 45px
+	background-color: #171917
+	.logo-ae
+		float: right
+	span
+		display: inline-block
+		line-height: 45px
+		color: #f5f5f5
+		font-weight: 500
+		font-size: 12px
+	img
+		margin-bottom: 5px
+b, strong
+	font-weight: bold
+	
+
+@import "media" 
