@@ -24,8 +24,8 @@ $(function() {
 $(window).on('mousemove', function(e) {
 	var w = $(window).width();
 	var h = $(window).height();
-	var offsetX = 0.5 - e.pageX /w;
-	var offsetY = 0.5 - e.pageY /h;
+	var offsetX = 0.9 - e.pageX /w;
+	var offsetY = 0.9 - e.pageY /h;
 	$(".parallax").each(function(i,el){
 	var offset = parseInt($(el).data('offset'));
     var translate = "translate3d(" + Math.round(offsetX*offset) + "px," + Math.round(offsetY * offset) + "px, 0px";
@@ -44,7 +44,16 @@ $(document).ready(function(){
     });
 });
 
-
+var target = $('.elem');
+var targetPos = target.offset().top;
+var winHeight = $(window).height();
+var scrollToElem = targetPos - winHeight;
+$(window).scroll(function(){
+  var winScrollTop = $(this).scrollTop();
+  if(winScrollTop > scrollToElem){
+    //сработает когда пользователь доскроллит к элементу с классом .elem
+  }
+});
 });
 
 
