@@ -10,8 +10,8 @@
 	color: #fff
 
 body
-	overflow-x: hidden
 	z-index: 10
+	width: 1900px
 	margin: auto
 	font-weight: bold
 	background-color: #fff
@@ -58,8 +58,11 @@ h3
 	color: $accent
 	font-weight: bold
 	font-size: 28px
-
-
+.clear 
+	clear: both
+.wrapper
+	width: 1280px
+	margin: auto
 header
 	overflow: hidden
 	background-image: url(../img/bg.png)
@@ -85,15 +88,23 @@ header
 		pointer-events: none
 		p
 	.header-top
+		margin: auto
+		width: 1280px
 		padding-top: 25px
+	
 	.logo-wrap
-		max-width: 226px
-		max-height: 50px
+		float: left
+		display: inline-block
+		width: 226px
+		height: 50px
 	.logo
 		display: inline-block
 		img
 			width: 100%
 	.top-menu
+		float: right
+		width: 950px
+		display: inline-block
 	.menu-main
 		display: block
 		margin-top: 10px
@@ -164,7 +175,7 @@ header
 	width: 1px
 	background-color: $accent
 	top: 30%
-	z-index: 100
+	z-index: 9
 	position: fixed
 	left: 2%
 	ul
@@ -189,14 +200,13 @@ header
 		box-shadow: inset 0 -1px 1px rgba(0,0,0,0.5)
 		transition: background-color .3s ease
 		transition: color .2s ease
-		animation: eye 3s ease-in-out infinite;
+		animation: eye 3s ease-in-out infinite
 		&:first-child
 			margin: 0
 		&:hover
 			background-color: $active
 			color: #202725	
 		span
-			display: none
 			width: 120px
 			font-size: 14px
 			position: absolute
@@ -233,7 +243,7 @@ ul .first
 		font-size: 39px
 	i
 		position: relative
-		top: 385px
+		top: 410px
 		font-size: 30px
 		color: #fff
 		width: 55px
@@ -285,8 +295,8 @@ ul .first
 				background-repeat: no-repeat
 				background-position: center
 				background-size: 100%
-				width: 101%
-				height: 101%
+				width: 100%
+				height: 100%
 				position: relative
 				pointer-events: none
 			span
@@ -306,12 +316,16 @@ ul .first
 				margin-top: -40px
 				position: relative
 				transition: .4s ease
+				border: solid 2px #fff
 			.bghover
 				height: 100%
 				width: 100%
 				background-color: #000
+				border-left: solid 2px #fff
+				border-right: solid 2px #fff
 				position: relative
-				z-index: -1				
+				z-index: -1		
+						
 			.contest-carousel-item
 				margin: auto
 				margin-bottom: 10px 
@@ -393,10 +407,12 @@ ul .first
 			z-index: 5
 			pointer-events: none
 	&-content
-		padding: 150px 60px 100px 60px
+		padding: 150px 50px 100px 50px
 		background-color: #fff
 		min-height: 690px
 		font-size: 15px
+		width: 700px
+		margin-left: 25px
 		&-header
 			z-index: 10
 			position: relative
@@ -429,7 +445,7 @@ ul .first
 		pointer-events: none
 		background-repeat: no-repeat
 		background-position: center
-		top: 1050px
+		top: 230px
 		bottom: 0
 		right: 0
 		left: 0
@@ -447,14 +463,15 @@ ul .first
 			margin-left: 10px
 			color: $accent
 	&-content
-		margin-top: -230px
-		padding: 0 60px
-		padding-top: 100px
-		height: 600px
+		float: right
+		width: 640px
+		display: inline-block
+		padding: 100px 60px 150px
 		font-size: 15px
 		position: relative
 		background-color: #fff
 		text-align: left
+		top: -50px
 		.button
 			display: inline-block
 		h3
@@ -464,26 +481,26 @@ ul .first
 			font-weight: 500
 			margin-bottom: 50px
 		&-bg
-			width: 100%
 			.bg-2
 				height: 114px
+				width: 100%
 				background-image: url(../img/of5.png)
 				background-repeat: no-repeat
 				background-position: center
 				pointer-events: none
-				position: relative
-				z-index: 10
-				top: -130px
+				position: absolute
+				top: 0
+				left: 0
 			.bg-1
+				width: 100%
 				height: 73px
 				background-image: url(../img/of4.png)
 				background-repeat: no-repeat
 				background-position: center
 				pointer-events: none
-				position: relative
-				z-index: 10
-				top: 490px
-
+				position: absolute
+				bottom: 0
+				left: 0
 		.date
 			margin-top: 7px
 			font-size: 12px
@@ -512,12 +529,15 @@ ul .first
 			background-repeat: no-repeat
 	
 .animals-items
+	float: left
 	text-align: left
+	display: inline-block
+	width: 640px
 .animal-item
 	vertical-align: top
 	text-align: center
 	display: inline-block
-	margin-right: 40px
+	margin-right: 30px
 	width: 90px
 	span
 		position: relative
@@ -563,8 +583,8 @@ ul .first
 		background-position: -137px 15px
 	&:nth-child(16) span
 		background-position: -60px 15px
-	&:nth-child(5n+5)
-		margin-right: 0
+//	&:nth-child(5n+5)
+//		margin-right: 0
 .animal-item:hover span
 	background-color: $accent
 	background-image: url(../img/sprite2.png)
@@ -611,17 +631,17 @@ ul .first
 	border-radius: 20px
 	color: #fff
 .news-poll
-	z-index: -1
-	margin-top: -90px
+	margin-top: -175px
 	position: relative
+	background-image: url(../img/bg3.png)
+	background-repeat: no-repeat
+	background-position: center
 	.date
 		margin-bottom: 20px
 	.news
 		margin-bottom: 60px
 		.date
 			margin-bottom: 0
-	.news-photo
-		margin-bottom: -250px
 	.news-header
 		h2
 			font-size: 46px
@@ -650,26 +670,22 @@ ul .first
 			color: #202725
 
 	&-content
-		margin: auto
-		padding-top: 260px
-		background: #fff
-		background-image: url(../img/bg3.png)
-		background-repeat: no-repeat
-		background-position: center
-		height: 1000px
+		padding-top: 320px
+		min-height: 1000px
 	.bg-photo
 		width: 312px
 		height: 281px
 		background-image: url(../img/of6.png)
 		z-index: 20
 		position: relative
-	
+	.news-photo-date
+		margin: 35px 10px 0
 	.bg-photo1
 		width: 312px
 		height: 281px
 		background-image: url(../img/photo4.jpg)
-		position: relative
-		top: -281px
+		position: absolute
+		top: 0
 		pointer-events: none
 	.bg-photo2
 		background-color: #f3f3f6
@@ -760,12 +776,13 @@ ul .first
 	position: absolute
 	width: 100%
 	height: 590px
-	top: -350px
+	top: -250px
 	right: 0
 	bottom: 0
 	left: 0
 	margin: auto
 	pointer-events: none
+	z-index: 8
 .contacts
 	padding-top: 370px
 	background-image: url(../img/bg4.png)
@@ -773,8 +790,7 @@ ul .first
 	background-repeat: no-repeat
 	height: 759px
 	position: relative
-	top: -300px
-	margin-bottom: -300px
+	margin-top: -280px
 	h2
 		color: #fff
 	&-content	
@@ -808,12 +824,12 @@ ul .first
 	max-width: 2000px
 	background: $active
 	height: 50px
+	text-align: center
 	a 
 		color: $dark
 		font-size: 14px
 		border-right: solid 1px #d9b92c
 		padding: 0 30px
-		line-height: 
 		&:hover
 			text-decoration: none
 	ul
@@ -825,7 +841,7 @@ footer
 	margin: auto
 	max-width: 2000px
 	background-color: #fff
-	.container
+	.wrapper
 		.col-5
 			background-color: #f8f8f8
 		.col-3:nth-child(2)
@@ -851,10 +867,10 @@ footer
 				font-size: 14px
 
 	.sub
-		margin-top: 20px
 		background-image: url(../img/bg5.png)
 		background-repeat: no-repeat
-		background-size: contain
+		background-position: center
+		background-size: 80%
 		height: 100%
 		text-align: center
 		font-size: 11px
@@ -862,7 +878,7 @@ footer
 		&-content
 			margin: auto
 			position: absolute
-			top: 0px
+			top: 50px
 			left: 0px
 			bottom: 0
 			right: 0
@@ -879,7 +895,6 @@ footer
 			font-size: 12px
 			padding: 10px 20px 10px 40px
 			display: block
-			width: 20em
 			&:active
 				background-color: #fff
 				font-style: normal
@@ -919,13 +934,117 @@ footer
 b, strong
 	font-weight: bold
 
-.project
-	header
-		height: auto
 
-.page1
-	.header
+
+
+.page
+	background-color: #fff
+	.page-parallax
+		margin: auto
+		background-image: url(../img/parallax-page.png)
+		background-position: center
+		background-size: contain		
+		background-repeat: no-repeat
+		width: 1800px
+		height: 360px
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		z-index: 30
+		pointer-events: none
+	header
+		height: 230px
+		position: relative
+		z-index: auto
 		background-image: none
-	.header-top
-		height: 300px
+		background-color: #99bdb0
+	&-header
+		position: absolute
+		top: -230px
+		left: 0
+		right: 0
+		text-align: center
+		a	
+			text-decoration: none
+			color: #202725
+			font-size: 12px
+			font-weight: 500
+			i
+				vertical-align: middle
+				margin-left: 10px
+				color: $accent
+		.menu-sub
+			
+	.page-main
+		margin-top: 0
+		padding-top: 253px
+		padding-bottom: 55px
+		position: relative
+		background: #f3f3f6
+		background-image: url(../img/bg-page.jpg)
+		background-repeat: no-repeat
+		background-position: -51px -110px
+		.page-content
+			top: 0
+			padding: 0
+			width: 1270px
+			min-height: 1200px
+			background-color: #fff
+			margin: auto
+			box-shadow: 0px 4px 7px 0px rgba(0,0,0,0.2)
+			position: relative
+			&-wrap
+				position: absolute
+				top: 0
+			.items
+				text-align: center
+				.item
+					display: inline-block
+					width: 420px
+					background-color: #fff
+					.page-bg-photo
+						display: inline-block
+						width: 337px
+						height: 265px
+						position: relative
+						.button-contest
+							box-shadow: none
+							position: relative
+							top: 0
+							visibility: hidden
+							transition: all .4s ease
+							opacity: .1
+					img
+						position: absolute
+						width: 100%
+						height: 100%
+						top: 0
+						left: 0
+						border-left: solid 5px #fff
+						border-right: solid 5px #fff
+					.photo-wrap
+						width: 100%
+						height: 100%
+						position: absolute
+						background-image: url(../img/overflow1.png)
+						background-position: center
+						background-size: contain
+						background-repeat: no-repeat
+						top: 0
+						z-index: 2
+					p
+						margin-bottom: 20px
+	.item:hover
+		color: $dark
+		.button-contest
+			visibility: visible
+			top: 110px
+			opacity: 1
+			transition: .4s ease
+			z-index: 4
+		.item .img
+			opacity: .5
+				
+				
 @import "media" 
