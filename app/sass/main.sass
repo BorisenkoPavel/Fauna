@@ -634,7 +634,7 @@ ul .first
 	border-radius: 20px
 	color: #fff
 .news-poll
-	margin-top: -175px
+	margin-top: -80px
 	position: relative
 	background-image: url(../img/bg3.png)
 	background-repeat: no-repeat
@@ -673,7 +673,7 @@ ul .first
 			color: #202725
 
 	&-content
-		padding-top: 320px
+		padding-top: 280px
 		min-height: 1000px
 	.bg-photo
 		width: 312px
@@ -785,7 +785,7 @@ ul .first
 	left: 0
 	margin: auto
 	pointer-events: none
-	z-index: 8
+	z-index: 30
 .contacts
 	padding-top: 370px
 	background-image: url(../img/bg4.png)
@@ -957,11 +957,31 @@ b, strong
 		z-index: 30
 		pointer-events: none
 	header
-		height: 230px
+		height: auto
 		position: relative
 		z-index: auto
 		background-image: none
 		background-color: #99bdb0
+		.top-menu-sub
+			width: 100%
+			background-color: #fff
+			margin: 0 
+			display: inline-block
+			text-align: center
+			height: 100px
+			box-shadow: 0px 4px 7px -10px rgba(0,0,0,0.2)
+			position: relative
+			ul
+				margin-top: 27px
+				display: inline-block
+				a 
+					background-color: #f3f3f6
+					margin-right: 30px
+					&:hover
+						background-color: $accent
+						box-shadow: none
+						
+
 	&-header
 		position: absolute
 		top: -230px
@@ -977,9 +997,10 @@ b, strong
 				vertical-align: middle
 				margin-left: 10px
 				color: $accent
-		.menu-sub
+	
 			
 	.page-main
+		box-shadow: inset 0px 12px 7px -10px rgba(0,0,0,.2);
 		margin-top: 0
 		padding-top: 253px
 		padding-bottom: 55px
@@ -1016,8 +1037,9 @@ b, strong
 							position: relative
 							top: 0
 							visibility: hidden
-							transition: all .4s ease
+							transition: .4s ease
 							opacity: .1
+							z-index: 2
 					img
 						position: absolute
 						width: 100%
@@ -1026,6 +1048,7 @@ b, strong
 						left: 0
 						border-left: solid 5px #fff
 						border-right: solid 5px #fff
+						z-index: 1
 					.photo-wrap
 						width: 100%
 						height: 100%
@@ -1035,19 +1058,23 @@ b, strong
 						background-size: contain
 						background-repeat: no-repeat
 						top: 0
-						z-index: 2
+						z-index: 3
 					p
 						margin-bottom: 20px
-	.item:hover
-		color: $dark
-		.button-contest
-			visibility: visible
-			top: 110px
-			opacity: 1
-			transition: .4s ease
-			z-index: 4
-		.item .img
-			opacity: .5
-				
-				
+				.item:hover
+					color: $dark
+					.button-contest
+						visibility: visible
+						top: 110px
+						opacity: 1
+						transition: .4s ease
+						z-index: 4
+					.img
+						opacity: .5
+		.contain-main
+			width: 777px	
+			margin: auto
+			display: inline-block
+			text-align: 
+		
 @import "media" 
