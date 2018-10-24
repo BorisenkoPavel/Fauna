@@ -35,13 +35,7 @@ $(function() {
 		})
 	})
   
-  $(".fancybox").fancybox({
-		'transitionIn'	:	'elastic',
-		'transitionOut'	:	'elastic',
-		'speedIn'		:	600, 
-		'speedOut'		:	200, 
-		'overlayShow'	:	true,
-	});
+  $(".fancybox").fancybox();
   
 	$(document).ready(function(){
 		$(".navbar").on("click","a", function (event) {
