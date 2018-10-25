@@ -11,12 +11,12 @@
 
 body
 	z-index: 10
-	width: 1900px
 	margin: auto
 	font-weight: bold
 	background-color: #fff
 	font-size: 16px
-	min-width: 320px
+	max-width: 1900px
+	min-width: 1200px
 	position: relative
 	line-height: 1.65
 	font-family: $default-font
@@ -28,21 +28,75 @@ body
 			border-color: red
 		&:required:valid
 			border-color: green
+.check
+  cursor: pointer
+  position: relative
+  margin: auto
+  width: 18px
+  height: 18px
+  -webkit-tap-highlight-color: transparent
+  transform: translate3d(0,0,0)
+  &:before
+    content: ""
+    position: absolute
+    top: -11px
+    left: -15px
+    width: 48px
+    height: 48px
+    border-radius: 50%
+    background: rgba(#223254,.03)
+    opacity: 0
+    transition: opacity .2s ease
+  svg
+    position: relative
+    z-index: 1
+    fill: none
+    stroke-linecap: round
+    stroke-linejoin: round
+    stroke: $accent
+    stroke-width: 1.5
+    transform: translate3d(0,0,0)
+    transition: all .2s ease
+    margin-right: 10px
+    top: 4px
+    path
+      stroke-dasharray: 60
+      stroke-dashoffset: 0
+    polyline 
+      stroke-dasharray: 22
+      stroke-dashoffset: 66
+  &:hover 
+    &:before
+      opacity: 1
+    svg
+      stroke: $accent
 
+#cbx:checked + .check
+  svg
+    stroke: $accent
+    path
+      stroke-dashoffset: 60
+      transition: all .3s linear
+    polyline
+      stroke-dashoffset: 42
+      transition: all .2s linear
+      transition-delay: .15s
 .button
 	text-decoration: none
 	color: $dark
 	background-color: $active
 	border-radius: 20px
-	padding: 10px 40px
+	padding: 10px 30px
 	font-size: 12px
 	box-shadow: 3px 3px 5px 0px rgba(0,0,0,.2)
 	cursor: pointer
+	display: inline-block
 	&:active
 		transform: scale(0.9)
 	&:hover
 		text-decoration: none
 		color: $dark
+
 button:focus
 	outline: none
 
@@ -61,7 +115,7 @@ h3
 .clear 
 	clear: both
 .wrapper
-	width: 1280px
+	width: 1200px
 	margin: auto
 header
 	background-image: url(../img/bg.png)
@@ -69,8 +123,9 @@ header
 	background-repeat: no-repeat
 	height: 1000px
 	position: relative
-	z-index: 20
 	background-color: $background
+	overflow: hidden
+
 	
 	.planet
 		background-image: url(../img/bg2.png)
@@ -78,8 +133,8 @@ header
 		position: absolute
 		background-repeat: no-repeat
 		height: 630px
-		max-width: 1406px
-		top: 0
+		wwidth: 100%
+		top: -100px
 		bottom: 0
 		left: 0
 		right: 0
@@ -88,7 +143,7 @@ header
 		p
 	.header-top
 		margin: auto
-		width: 1280px
+		max-width: 1200px
 		padding: 15px 0
 	
 	.logo-wrap
@@ -174,7 +229,7 @@ header
 	width: 1px
 	background-color: $accent
 	top: 30%
-	z-index: 100
+	z-index: 20
 	position: fixed
 	left: 2%
 	ul
@@ -186,6 +241,7 @@ header
 		height: 100%
 		text-decoration: none
 		color: #fff
+
 	li
 		position: relative
 		left: -10px
@@ -219,6 +275,7 @@ header
 			line-height: 1.3
 			white-space: nowrap
 			color: #fff
+			box-shadow: 5px 4px 6px rgba(0,0,0,.2)
 			&:before
 				content: ''
 				position: absolute
@@ -255,30 +312,28 @@ ul .first
 		line-height: 55px 
 		font-size: 30px
 		box-shadow: 4px 4px 10px 0px rgba(0,0,0,.2)
+
+.contest-bg
+	width: 100%
+	background-image: url(../img/contest-bg.png)
+	height: 150px
+	background-position: center 
+	background-repeat: no-repeat
+	background-size: contain
+	position: absolute
+	left: 0
+	right: 0
+	bottom: -20px
+	margin: auto
+	pointer-events: none
+	z-index: auto
+	z-index: 15
 .contest
 	background-color: $background
 	overflow: hidden
 	text-align: center
 	position: relative
-	padding-top: 100px
-	margin-top: -100px
-	&-bg
-		width: 2000px
-		background-image: url(../img/contest-bg.png)
-		height: 150px
-		background-position: center 
-		background-repeat: no-repeat
-		background-size: contain
-		position: absolute
-		top: 0
-		left: 0
-		right: 0
-		bottom: 0
-		top: -350px
-		margin: auto
-		pointer-events: none
-		z-index: auto
-		z-index: 20
+
 	a
 		font-weight: 500
 		text-decoration: none
@@ -377,6 +432,7 @@ ul .first
 	background-repeat: no-repeat
 	position: relative
 	z-index: 3
+	overflow: hidden
 	.fauna-bg
 		position: absolute
 		margin: auto
@@ -435,7 +491,6 @@ ul .first
 		display: inline-block
 
 .animals
-
 	text-align: center
 	position: relative
 	background-color: $background
@@ -465,8 +520,7 @@ ul .first
 			margin-left: 10px
 			color: $accent
 	&-content
-		float: right
-		width: 640px
+		width: 100%
 		display: inline-block
 		padding: 100px 60px 150px
 		font-size: 15px
@@ -531,15 +585,14 @@ ul .first
 			background-repeat: no-repeat
 	
 .animals-items
-	float: left
 	text-align: left
 	display: inline-block
-	width: 640px
+	width: 100%
 .animal-item
 	vertical-align: top
 	text-align: center
 	display: inline-block
-	margin-right: 30px
+	margin-right: 27px
 	width: 90px
 	span
 		position: relative
@@ -632,7 +685,10 @@ ul .first
 	padding: 2px 20px
 	border-radius: 20px
 	color: #fff
+
 .news-poll
+	overflow: hidden
+	width: 100%
 	margin-top: -70px
 	position: relative
 	background-image: url(../img/bg3.png)
@@ -675,29 +731,29 @@ ul .first
 		padding-top: 280px
 		min-height: 1000px
 	.bg-photo
-		width: 312px
-		height: 281px
+		width: 300px
+		height: 270px
 		background-image: url(../img/of6.png)
+		background-size: contain
 		z-index: 20
 		position: relative
 	.news-photo-date
 		margin: 35px 10px 0
 	.bg-photo1
-		width: 312px
-		height: 281px
+		width: 290px
+		height: 270px
 		background-image: url(../img/photo4.jpg)
 		position: absolute
 		top: 0
 		pointer-events: none
 	.bg-photo2
-		background-color: #f3f3f6
-		width: 312px
-		height: 281px
+		width: 300px
+		height: 270px
 		position: relative
 		top: 0px
 		background-image: url(../img/animals2.jpg)
 		background-repeat: no-repeat
-		background-size: cover
+		background-size: contain
 		div
 			text-align: center
 			height: 100%
@@ -767,7 +823,7 @@ ul .first
 			border: $active solid 5px
 		input[type="submit"]
 			position: absolute
-			left: -233px
+			left: -207px
 			top: 160px
 			border: none
 			padding: 
@@ -776,15 +832,14 @@ ul .first
 	background-repeat: no-repeat
 	background-position: center
 	position: absolute
-	width: 1850px
+	width: 100%
 	height: 590px
-	top: -250px
+	top: -350px
 	right: 0
 	bottom: 0
 	left: 0
 	margin: auto
 	pointer-events: none
-	z-index: 10
 .contacts
 	padding-top: 370px
 	background-image: url(../img/bg4.png)
@@ -796,6 +851,7 @@ ul .first
 	h2
 		color: #fff
 	&-content	
+		padding-left: 20px
 		.contacts-item
 			color: #fff
 			font-weight: 500
@@ -823,7 +879,7 @@ ul .first
 
 .menu
 	margin: auto
-	max-width: 2000px
+	width: 100%
 	background: $active
 	height: 50px
 	text-align: center
@@ -841,7 +897,7 @@ ul .first
 
 footer
 	margin: auto
-	max-width: 2000px
+	width: 100%
 	background-color: #fff
 	.wrapper
 		.col-5
@@ -940,12 +996,14 @@ b, strong
 
 
 .page
+	max-width: 1900px
 	background-color: #fff
+	overflow-x: hidden
 	.bg-page-content
-		width: 1900px
+		width: 1200px
 		height: 834px
 		bottom: -55px
-		left: -315px
+		left: 0
 		background-image: url(../img/project-bg.png)
 		background-repeat: no-repeat
 		background-position: center
@@ -983,10 +1041,10 @@ b, strong
 		background-position: center
 		background-size: contain		
 		background-repeat: no-repeat
-		width: 1800px
+		max-width: 1900px
 		height: 360px
 		position: absolute
-		top: 0
+		top: 70px
 		left: 0
 		right: 0
 		z-index: 30
@@ -996,6 +1054,7 @@ b, strong
 		position: relative
 		background-image: none
 		background-color: #99bdb0
+		overflow: visible
 		
 		.top-menu-sub
 			width: 100%
@@ -1045,11 +1104,12 @@ b, strong
 		background: #f3f3f6
 		background-image: url(../img/bg-page.jpg)
 		background-repeat: no-repeat
-		background-position: -51px -110px
+		background-position: center -80px
+		background-size: contin
 		.page-content
 			top: 0
 			padding: 0
-			width: 1270px
+			max-width: 1200px
 			min-height: 1200px
 			background-color: #fff
 			margin: auto
@@ -1149,7 +1209,7 @@ b, strong
 							.button-contest
 								background-image: url(../img/link.png)
 								background-repeat: no-repeat
-								background-position: 145px center
+								background-position: 130px center
 						.photo-wrap
 							background-image: none
 
@@ -1343,10 +1403,12 @@ b, strong
 						.page-bg-photo
 							width: 191px
 							height: 150px	
+
 						.photo-wrap
 						img 
 							align: right
 							position: absolute
+							border: none
 
 
 			.contain-main.page-animals
@@ -1418,19 +1480,35 @@ b, strong
 				padding: 0 20px
 				text-align: left
 				width: 100%
+				.contest-change
+					text-align: center
+					.button
+						margin: 0 10px 0px 10px
+					.button.active
+						background-color: #f3f3f6
+						box-shadow: none
+				.contest-content
+					margin-top: 60px
 				.item
 					text-align: center
 					display: inline-block
 					width: 407px
+					color: #a2a2a2
+					span
+						margin-top: 15px
+					p
+						margin-top: 15px
 					.contest-content-item
 						position: relative
 						width: 407px
 						height: 229px
+						.button-contest
+							z-index: 4
 						.photo-overlay
 							background-image: url(../img/contest-of.png)
 							background-repeat: no-repeat
 							background-position: center
-							background-size: 100%
+							background-size: contain
 							width: 100%
 							height: 100%
 							position: absolute
@@ -1442,30 +1520,203 @@ b, strong
 							width: 100%
 							position: absolute
 							transition: .4s ease
-							border: solid 2px #fff
+							border-left: solid 20px #fff
+							border-right: solid 20px #fff
 							top: 0
 							left: 0
 						.bghover
 							position: absolute
-					img
-						width: 100%
+				.item:hover
+					color: $dark
+					.button-contest
+						visibility: visible
+						top: 110px
+						opacity: 1
+						transition: .4s ease
+						z-index: 4
+						
+					
 			.page-bg-content
 				margin-top: 30px
 			.contain-main.page-contacts
 				width: 100%
+				min-height: 1400px
 				color: $dark
 				h3
 					color: $dark
-				.contacts-item
-					display: inline-block
-					
-					margin: 0
-					padding: 0
-					text-align: center
-					color: $dark
+				.contacts-content
+					width: 100%
+					margin-top: 100px
+					padding: 0 40px
+					a 
+						text-decoration: underline
+						color: $accent
+					.col
+						position: relative
+						.contacts-item
+							font-size: 14px
+							display: block
+							margin: auto
+							padding: 0
+							color: $dark
+							line-height: 24px
+							&:before 
+								position: absolute
+								top: -40px
+								left: 0
+								right: 0
+								margin: auto
+								background-color: $accent
+								background-image: url(../img/page-cont-sprite.png)
+								background-position: 10px 8px
+						&:nth-child(2) 
+							.contacts-item
+								font-size: 24px
+							.contacts-item:before
+								background-position: -23px 8px
+						&:nth-child(3)
+							.contacts-item:before
+								background-position: 	-64px 6px
 				.maps
 					background-image: url(../img/map.png)
-					width: 1240px
+					background-repeat: no-repeat
+					background-position: center
+					background-size: contain
+					width: 1150px
 					height: 556px
+					overflow: vissible
+					padding: 	0 20px
+					margin: 40px auto
+					margin-bottom: 60px
+					position: relative
+					&-adres
+						color: #fff
+						text-align: left
+						position: absolute
+						right: 100px
+						top: 170px
+						h3
+							margin-left: 15px
+							color: #fff
+							font-size: 30px
+							&:before
+								content: '?'
+								width: 33px
+								height: 33px
+								border-radius: 20px
+								position: relative
+								top: 0px
+								left: -15px
+								background-color: $accent
+								display: inline-block
+								text-align: center
+								line-height: 33px
+						p
+							line-height: 30px
+				.contacts-form
+					margin-left: 30px
+					height: 440px
+					width: 560px
+					background-color: #fff
+					text-align: left
+					p
+						font-size: 12px
+						font-style: italic
+						margin-bottom: 3px
+						padding-left: 10px
+					.agree
+						font-size: 10px
+						padding: 0
+						padding-top: 50px
+						margin: 0
+						font-style: normal
+						a 
+							color: $accent
+							text-decoration: underline
+					input
+						margin: 0
+						display: inline-block
+						border-radius: 40px 
+						border: solid 1px #e7e7e9
+						background-color: #f7f7f9
+						background-image: url(../img/sprite-page-cont.png)
+						background-repeat: no-repeat
+						background-position: 15px -166px
+						font-style: italic
+						font-size: 14px
+						padding: 12px 20px 12px 40px
+						display: block
+						box-shadow: inset 0px 1px 4px rgba(0,0,0,.1)
+						width: 260px
+						margin-bottom: 25px
+						&:nth-child(2)
+							background-position: 15px 15px
+						&:nth-child(4)
+							background-position: 15px -74px
+						&:active
+							background-color: #fff
+							font-style: normal
+						&:focus
+							background-color: #fff
+							font-style: normal
+					button
+						margin: auto
+						margin-top: 15px
+						display: block
+						border: none
+					textarea
+						border-radius: 10px 
+						border: solid 1px #e7e7e9
+						box-shadow: inset 0px 2px 4px rgba(0,0,0,.1)
+						resize: none
+					h4
+						text-align: center
+						font-size: 22px
+					.check
+						float: left
+						width: auto
+						border: $accent
+						margin: 0
+					label
+						margin-left: 10px
+						font-size: 12px
+						font-style: italic
+						a 
+							color: $accent
+							text-decoration: underline
+				.peaple-item
+					margin-top: 30px
+					text-align: left
+					font-size: 14px
+					img
+						display: block
+						margin: auto
+					span
+						padding-left: 20px
+						display: inline-block
+						margin: 20px 0
+						font-size: 16px
+						font-weight: bold
+					p
+						padding-left: 20px
+				
+
+
+
+			.news-page
+				.contain-main.page-news
+					padding: 0 20px
+					text-align: left
+					width: 100%
+				.news-change
+					text-align: center
+					.button
+						margin: 0 10px 0px 10px
+					.button.active
+						background-color: #f3f3f6
+						box-shadow: none
+				.contest-content
+					margin-top: 60px
+
 
 @import "media" 
