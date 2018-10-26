@@ -35,11 +35,6 @@ $(function() {
 		});
 	});
 
-	$('[data-fancybox="gallery"]').fancybox({
-
-
-	});
-
 	$(document).ready(function(){
 		$(".navbar").on("click","a", function (event) {
 			event.preventDefault();
@@ -100,5 +95,8 @@ $(function() {
 		var selector = 'a[href$="' + sectionId[i-1] + '"]';
 		$(selector).children('span').slideToggle(350);
 	}
+
+$('[data-fancybox="gallery"]').fancybox();
+
 });
 

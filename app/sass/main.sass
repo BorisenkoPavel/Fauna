@@ -95,6 +95,11 @@ body
 		transform: scale(0.9)
 	&:hover
 		text-decoration: none
+		color: #fff
+		background-color: $accent
+.button-contest
+	&:hover
+		background-color: $active
 		color: $dark
 
 button:focus
@@ -128,7 +133,7 @@ header
 
 	
 	.planet
-		background-image: url(../img/bg2.png)
+		background-image: url(../img/parallax-top.png)
 		background-position: center
 		position: absolute
 		background-repeat: no-repeat
@@ -140,7 +145,11 @@ header
 		right: 0
 		margin: auto
 		pointer-events: none
-		p
+	.pl2
+		background-image: url(../img/parallax-top2.png)
+		background-position: center 10px
+	.pl3
+		background-image: url(../img/parallax-top3.png)
 	.header-top
 		margin: auto
 		max-width: 1200px
@@ -336,8 +345,8 @@ ul .first
 
 	a
 		font-weight: 500
-		text-decoration: none
 		color: #202725
+		text-decoration: underline
 		font-size: 12px
 		i
 			vertical-align: middle
@@ -510,8 +519,9 @@ ul .first
 		z-index: 2
 	&-header
 		margin-bottom: 90px
+		a 
+			text-decoration: underline
 	a
-		text-decoration: none
 		color: #202725
 		font-size: 12px
 		font-weight: 500
@@ -705,9 +715,9 @@ ul .first
 			font-size: 46px
 			display: inline-block
 		a 
+			text-decoration: underline
 			float: right
 			margin-top: 40px
-			text-decoration: none
 			color: #202725
 			vertical-align: bottom
 			display: inline-block
@@ -758,6 +768,8 @@ ul .first
 			text-align: center
 			height: 100%
 			padding-top: 85px
+		input[type="submit"]
+			border: none
 
 	.poll-header
 		h2
@@ -767,7 +779,7 @@ ul .first
 			float: right
 			margin-top: 40px
 			margin-right: 40px
-			text-decoration: none
+			text-decoration: underline
 			color: #202725
 			vertical-align: bottom
 			display: inline-block
@@ -821,12 +833,7 @@ ul .first
 			opacity: 1
 		input[type="radio"]:checked + label:before
 			border: $active solid 5px
-		input[type="submit"]
-			position: absolute
-			left: -207px
-			top: 160px
-			border: none
-			padding: 
+		
 .parallax-news
 	background-image: url(../img/bg-news.png)
 	background-repeat: no-repeat
@@ -890,10 +897,17 @@ ul .first
 		padding: 0 30px
 		&:hover
 			text-decoration: none
+
 	ul
+		padding: 0
+		width: 1200px
+		display: block
 		padding-top: 12px
+		margin: auto
 		li
 			display: inline-block
+			&:last-child a
+				border-right: none
 
 footer
 	margin: auto
@@ -918,7 +932,7 @@ footer
 	.footer-contacts
 		.contacts-content
 			margin-top: 45px
-			margin-left: 30px
+			margin-left: 10px
 			div
 				color: $text
 				margin: 10px
@@ -996,13 +1010,12 @@ b, strong
 
 
 .page
-	max-width: 1900px
+	min-width: 1200px
 	background-color: #fff
-	overflow-x: hidden
 	.bg-page-content
-		width: 1200px
+		width: 100%
 		height: 834px
-		bottom: -55px
+		bottom: -1px
 		left: 0
 		background-image: url(../img/project-bg.png)
 		background-repeat: no-repeat
@@ -1041,7 +1054,7 @@ b, strong
 		background-position: center
 		background-size: contain		
 		background-repeat: no-repeat
-		max-width: 1900px
+		width: 98%
 		height: 360px
 		position: absolute
 		top: 70px
@@ -1081,12 +1094,12 @@ b, strong
 			display: none
 	&-header
 		position: absolute
-		top: -230px
+		top: 20px
 		left: 0
 		right: 0
 		text-align: center
 		a	
-			text-decoration: none
+			text-decoration: underline
 			color: #202725
 			font-size: 12px
 			font-weight: 500
@@ -1114,7 +1127,6 @@ b, strong
 			background-color: #fff
 			margin: auto
 			box-shadow: 0 8px 9px 0 rgba(0,0,0,.2)
-			position: relative
 			display: block
 			&-wrap
 				top: 0
@@ -1421,6 +1433,8 @@ b, strong
 						text-decoration: none
 				.animals-items
 					font-size: 14px
+					float: none
+					width: 100%
 					span
 						border: solid 3px #f3f3f6
 						box-sizing: content-box
@@ -1433,7 +1447,7 @@ b, strong
 					margin-left: 20px
 					display: inline-block
 					vertical-align: top
-					width: 900px
+					width: 800px
 					h3
 						margin-bottom: 3px
 					p
@@ -1454,10 +1468,6 @@ b, strong
 							display: inline-block
 							line-height: 28px
 							padding: 0 20px
-				.animals-items
-					float: none
-					width: 100%
-
 				.photo-animals
 					display: inline-block
 					width: 312px
@@ -1487,12 +1497,13 @@ b, strong
 					.button.active
 						background-color: #f3f3f6
 						box-shadow: none
+						transform: none
 				.contest-content
 					margin-top: 60px
 				.item
 					text-align: center
 					display: inline-block
-					width: 407px
+					width: 380px
 					color: #a2a2a2
 					span
 						margin-top: 15px
@@ -1500,7 +1511,7 @@ b, strong
 						margin-top: 15px
 					.contest-content-item
 						position: relative
-						width: 407px
+						width: 100%
 						height: 229px
 						.button-contest
 							z-index: 4
@@ -1520,8 +1531,8 @@ b, strong
 							width: 100%
 							position: absolute
 							transition: .4s ease
-							border-left: solid 20px #fff
-							border-right: solid 20px #fff
+							border-left: solid 10px #fff
+							border-right: solid 10px #fff
 							top: 0
 							left: 0
 						.bghover
@@ -1660,8 +1671,8 @@ b, strong
 							background-color: #fff
 							font-style: normal
 					button
-						margin: auto
 						margin-top: 15px
+						margin: auto
 						display: block
 						border: none
 					textarea
@@ -1698,16 +1709,15 @@ b, strong
 						font-size: 16px
 						font-weight: bold
 					p
-						padding-left: 20px
-				
+						padding: 0 20px
+					
 
 
 
-			.news-page
-				.contain-main.page-news
-					padding: 0 20px
-					text-align: left
-					width: 100%
+			.contain-main.page-news
+				padding: 0 20px
+				text-align: left
+				width: 100%
 				.news-change
 					text-align: center
 					.button
@@ -1715,8 +1725,122 @@ b, strong
 					.button.active
 						background-color: #f3f3f6
 						box-shadow: none
-				.contest-content
+						transform: none
+				.news-content
 					margin-top: 60px
+					.news-theme-item
+						margin-bottom: 	50px
+					.news-theme
+						margin-left: 20px
+						display: inline-block
+						vertical-align: top
+						width: 800px
+						h3
+							margin-bottom: 3px
+							color: $dark
+						p
+							font-weight: 500
+							margin-bottom: 30px
+						.theme
+							width: 210px
+							height: auto
+							margin-bottom: 5px
+							.date
+								line-height: 22px
+								padding: 0 20px
+					.photo-news
+						display: inline-block
+						width: 312px
+						height: 281px
+						position: relative
+						img
+							width: 100%
+							height: 100%
+							position: absolute
+						.photo-wrapper
+							width: 100%
+							height: 100%
+							background-image: url(../img/of6.png)
+							background-repeat: no-repeat
+							position: absolute
+							z-index: 10
+			
+
+			.contain-main.page-poll
+				width: 100%
+				padding: 50px 
+				.poll-item
+					text-align: left
+					p
+						margin-bottom: 60px
+						line-height: 1.2
+						font-weight: 400
+					.votes
+						text-align: center
+						span
+							color: $accent
+					.bg-photo2
+						vertical-align: top
+						width: 300px
+						height: 270px
+						position: relative
+						display: inline-block
+						top: 0px
+						background-image: url(../img/animals2.jpg)
+						background-repeat: no-repeat
+						background-size: contain
+						input[type="submit"]
+							border: none
+						div
+							text-align: center
+							height: 100%
+							padding-top: 85px
+					.poll-wrapper
+						margin-left: 80px
+						display: inline-block
+						input[type="radio"]:checked, 
+						input[type="radio"]:not(:checked)
+							display: none
+						input[type="radio"]:checked + label, 
+						input[type="radio"]:not(:checked) + label
+							display: inline-block
+							position: relative
+							padding-left: 28px
+							line-height: 20px
+							cursor: pointer
+						input[type="radio"]:checked + label:before,
+						input[type="radio"]:not(:checked) + label:before 
+							content: ""
+							position: absolute
+							left: 0px
+							top: 0px
+							width: 23px
+							height: 23px
+							background-color: #ffffff
+							border-radius: 100%
+							border: solid 5px #c5c5c5
+						input[type="radio"]:checked + label:after, 
+						input[type="radio"]:not(:checked) + label:after 
+							content: ""
+							position: absolute
+							transition: all 0.2s ease
+						input[type="radio"]:checked + label:after, 
+						input[type="radio"]:not(:checked) + label:after 
+							left: 7px
+							top: 7px
+							width: 9px
+							height: 9px
+							border-radius: 100%
+							background-color: #6f6f6f
+						input[type="radio"]:not(:checked) + label:after
+				    	opacity: 0
+						input[type="radio"]:checked + label:after
+							opacity: 1
+						input[type="radio"]:checked + label:before
+							border: $active solid 5px
+						
+
+
 
 
 @import "media" 

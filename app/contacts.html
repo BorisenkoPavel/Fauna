@@ -100,13 +100,13 @@
 							<div class="col-6">
 								<div class="contacts-form">
 									<h4>Отправьте нам пиьсмо с вопросом или пожеланием!</h4>
-									<form action="" class="callback">
+									<form id="f2" action="#" class="callback">
 											<div class="row">
 												<div class="col-6">
 													<p>Имя</p>
 													<input type="text" name="Имя" placeholder="Ваше имя" required="">
 													<p>Телефон</p>
-													<input type="text" name="Телефон" placeholder="Ваш Телефон" required="">
+													<input type="text" name="Телефон" placeholder="Ваш Телефон" required="" pattern="2[0-9]{3}-[0-9]{3}">
 													<p>Email</p>
 													<input type="text" name="Почта" placeholder="Ваша Почта" required="">
 													<input type="checkbox" id="cbx" style="display: none;">
@@ -121,7 +121,7 @@
 												</div>
 												<div class="col-6">
 													<p>Текст вашего письма</p>
-													<textarea name="Письмо" id="" cols="35" rows="10"></textarea>
+													<textarea name="Письмо" cols="30" rows="10" form="f2"></textarea>
 													<button class="button">Отправить письмо</button>
 												</div>
 											</div>
@@ -132,14 +132,14 @@
 									<div class="row">
 										<div class="col">
 											<div class="peaple-item">
-											<img src="../img/photo-cont2.jpg"  alt="Балук Наталья">
+											<img src="img/photo-cont.jpg"  alt="Балук Наталья">
 											<span>Марискин Игорь Николаевич </span>
 											<p>Руководитель проекта Открытая эколого-просветительская школа «Фауна»</p>
 											</div>
 										</div>
 										<div class="col">
 											<div class="peaple-item">
-											<img src="../img/photo-cont.jpg" alt="Марискин Игорь">
+											<img src="img/photo-cont2.jpg" alt="Марискин Игорь">
 											<span>Батлук Наталья Владимировна </span>
 											<p>Председатель правления АКЭОО «Моя малая Родина»</p>
 										</div>
