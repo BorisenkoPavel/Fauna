@@ -91,9 +91,11 @@ $(function() {
 		currentSection = i;
 		sectionId.forEach(function(item) {
 			$('a[href$="' + item + '"]').children('span').hide(350);
+			$('a[href$="' + item + '"]').parent().removeClass('active')
 		});
 		var selector = 'a[href$="' + sectionId[i-1] + '"]';
 		$(selector).children('span').slideToggle(350);
+		$(selector).parent().addClass('active');
 	}
 
 $('[data-fancybox="gallery"]').fancybox();
