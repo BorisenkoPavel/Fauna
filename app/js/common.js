@@ -21,6 +21,8 @@ $(function() {
 		}
 	});
 
+	$("#phone").mask("+7(999) 999-9999");
+
 	$(window).on('mousemove', function(e) {
 		var w = $(window).width();
 		var h = $(window).height();

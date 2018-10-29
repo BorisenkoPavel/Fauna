@@ -1134,10 +1134,14 @@ b, strong
 			&-wrap
 				top: 0
 			.items
+				padding: 0	20px
 				text-align: center
+				text-align: justify
 				.item
 					display: inline-block
 					background-color: #fff
+					text-align: center
+
 					p
 						font-weight: 500
 					.page-bg-photo
@@ -1189,7 +1193,8 @@ b, strong
 					margin-bottom: 20px
 					font-size: 24px
 				color: $dark
-				width: 777px
+				width: 100%
+				padding: 0 50px
 				margin: auto
 				display: block
 				text-align: center
@@ -1211,7 +1216,7 @@ b, strong
 					.item
 						margin-right: 36px
 						text-align: center
-						&:nth-child(3n+3)
+						&:nth-child(4n+4)
 							margin-right: 0
 						&:hover
 							.button-contest
@@ -1231,6 +1236,7 @@ b, strong
 			.contain-main.page7
 				width: 100%
 				.items
+					padding: 0
 					.item
 						p
 							text-align: left
@@ -1305,7 +1311,7 @@ b, strong
 						text-align: center
 						margin-right: 82px
 						text-align: center
-						&:nth-child(3n+3)
+						&:nth-child(4n+4)
 							margin-right: 0
 						p
 						&:hover
@@ -1324,6 +1330,7 @@ b, strong
 						padding: 20px 0
 						font-weight: bold
 				.items
+					text-align: center
 					margin-top: 35px
 					margin-bottom: 30px
 					.item
@@ -1347,6 +1354,7 @@ b, strong
 
 			.contain-main.page4
 				.items
+					text-align: center
 					.item
 						.page-bg-photo
 							width: 256px
@@ -1358,6 +1366,7 @@ b, strong
 
 			.contain-main.page3
 				.items
+					text-align: center
 					.item
 						.page-bg-photo
 							width: 777px
@@ -1370,13 +1379,15 @@ b, strong
 
 			.contain-main.page2
 				.sp-wrap
+					display: block
 					border: solid 1px #F3F1F6
 					width: 777px
-					margin-bottom: 15px
+					margin: auto 
 					box-shadow: 0px 2px 3px 0 rgba(0,0,0,.2)
 					img
 						padding: 30px
 				.items
+					text-align: center
 					margin-top: 60px
 					margin-bottom: 30px
 					.item
@@ -1388,6 +1399,8 @@ b, strong
 			.contain-main.page1
 				padding-bottom: 900px
 				.items
+					text-align: center
+					margin-top: 50px
 					.item
 						font-size: 12px
 						font-style: italic
@@ -1427,9 +1440,6 @@ b, strong
 
 
 			.contain-main.page-animals
-				width: 100%
-				margin: 0 25px 25px 25px
-				padding: 0 
 				a 
 					color: $dark
 					&:hover 
@@ -1438,6 +1448,10 @@ b, strong
 					font-size: 14px
 					float: none
 					width: 100%
+					.animal-item
+						margin-right: 32px
+						&:nth-child(9)
+							margin-right: 0
 					span
 						border: solid 3px #f3f3f6
 						box-sizing: content-box
@@ -1450,7 +1464,7 @@ b, strong
 					margin-left: 20px
 					display: inline-block
 					vertical-align: top
-					width: 800px
+					width: 750px
 					h3
 						margin-bottom: 3px
 					p
@@ -1501,6 +1515,8 @@ b, strong
 						background-color: #f3f3f6
 						box-shadow: none
 						transform: none
+						color: $dark
+						cursor: default 
 				.contest-content
 					margin-top: 60px
 				.item
@@ -1514,9 +1530,10 @@ b, strong
 						margin-top: 15px
 					.contest-content-item
 						position: relative
-						width: 100%
-						height: 229px
+						width: 360px
+						height: 225px
 						.button-contest
+
 							z-index: 4
 						.photo-overlay
 							background-image: url(../img/contest-of.png)
@@ -1534,8 +1551,7 @@ b, strong
 							width: 100%
 							position: absolute
 							transition: .4s ease
-							border-left: solid 10px #fff
-							border-right: solid 10px #fff
+
 							top: 0
 							left: 0
 						.bghover
@@ -1544,7 +1560,7 @@ b, strong
 					color: $dark
 					.button-contest
 						visibility: visible
-						top: 110px
+						top: 100px
 						opacity: 1
 						transition: .4s ease
 						z-index: 4
@@ -1596,7 +1612,7 @@ b, strong
 					background-repeat: no-repeat
 					background-position: center
 					background-size: contain
-					width: 1150px
+					width: 100%
 					height: 556px
 					overflow: vissible
 					padding: 	0 20px
@@ -1628,9 +1644,9 @@ b, strong
 						p
 							line-height: 30px
 				.contacts-form
-					margin-left: 30px
+					padding-right: 10px
 					height: 440px
-					width: 560px
+					width: 100%
 					background-color: #fff
 					text-align: left
 					p
@@ -1674,8 +1690,7 @@ b, strong
 							background-color: #fff
 							font-style: normal
 					button
-						margin-top: 15px
-						margin: auto
+						margin: 30px auto 0
 						display: block
 						border: none
 					textarea
@@ -1705,7 +1720,7 @@ b, strong
 					font-size: 14px
 					margin-right: 0px
 					img
-						width: 250px
+						width: 100%
 						display: block
 						margin: auto
 					span
@@ -1732,6 +1747,8 @@ b, strong
 						background-color: #f3f3f6
 						box-shadow: none
 						transform: none
+						color: $dark
+						cursor: default 
 				.news-content
 					margin-top: 60px
 					.news-theme-item

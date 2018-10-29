@@ -106,7 +106,7 @@
 													<p>Имя</p>
 													<input type="text" name="Имя" placeholder="Ваше имя" required="">
 													<p>Телефон</p>
-													<input type="text" name="Телефон" placeholder="Ваш Телефон" required="" pattern="2[0-9]{3}-[0-9]{3}">
+													<input id="phone" type="text" name="Телефон" placeholder="Ваш Телефон" required="" pattern="2[0-9]{3}-[0-9]{3}">
 													<p>Email</p>
 													<input type="text" name="Почта" placeholder="Ваша Почта" required="">
 													<input type="checkbox" id="cbx" style="display: none;">
@@ -121,7 +121,7 @@
 												</div>
 												<div class="col-6">
 													<p>Текст вашего письма</p>
-													<textarea name="Письмо" cols="30" rows="10" form="f2"></textarea>
+													<textarea name="Письмо" cols="25" rows="10" form="f2"></textarea>
 													<button class="button">Отправить письмо</button>
 												</div>
 											</div>
@@ -212,6 +212,8 @@
 			</div>
 		</div>
 	</footer>
+
 	<script src="js/scripts.min.js"></script>
+		<script src="js/jquery.maskedinput.min.js"></script>
 </body>
 </html>
